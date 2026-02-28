@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoHeartFill } from "react-icons/go";
 import { HiShoppingBag } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
@@ -6,10 +6,24 @@ import { TbMenu2, TbMenu3 } from "react-icons/tb";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-white fixed top-0 right-0 left-0 mx-10 z-50">
-      <nav className="max-w-360 mx-auto md:h-[14vh] h-[12vh] flex justify-between items-center">
+    <header
+      className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled ? "drop-shadow-[0_4px_25px_rgba(0,0,0,0.1)]" : ""}`}
+    >
+      <nav className="max-w-360 mx-auto md:h-[14vh] h-[12vh] px-10 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify
@@ -87,7 +101,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <ul
-          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl rounded-xl md:hidden items-center p-10 absolute gap-x-15 top-30 -left-full transform -translate-x-1/2 transition-all duration-500 ${showMenu ? "left-1/2" : ""}`}
+          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl shadow-xl rounded-xl md:hidden items-center p-10 absolute gap-x-15 top-30 -left-full transform -translate-x-1/2 transition-all duration-500 ${showMenu ? "left-1/2" : ""}`}
         >
           <li>
             <a

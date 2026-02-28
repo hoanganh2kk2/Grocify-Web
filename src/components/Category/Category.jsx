@@ -32,10 +32,15 @@ const category = [
 const Category = () => {
   const renderCards = category.map((card) => {
     return (
-      <div className="flex-1 basis-75">
+      // Card
+      <div className="flex-1 basis-75" key={card.id}>
         {/* Card Image */}
         <div className="w-full min-h-[30vh] relative -mb-10">
-          <img src={card.image} alt={card.title} className="absolute bottom-0"/>
+          <img
+            src={card.image}
+            alt={card.title}
+            className="absolute bottom-0"
+          />
         </div>
 
         {/* Card Content */}
@@ -54,7 +59,7 @@ const Category = () => {
         <Heading highlight="Danh mục" heading="sản phẩm" />
 
         {/* Category Cards */}
-        <div className="flex flex-wrap gap-10 mt-15">{renderCards}</div>
+        <div className="flex flex-wrap gap-10 md:mt-15">{renderCards}</div>
       </div>
     </section>
   );
