@@ -14,29 +14,29 @@ const steps = [
   {
     id: 1,
     number: <TbCircleNumber1Filled />,
-    title: "Sourcing",
-    para: "It is a long established fact that a reader",
+    title: "Chọn lọc nguồn cung",
+    para: "Chúng tôi hợp tác với nhà cung cấp uy tín, đảm bảo thực phẩm có nguồn gốc rõ ràng và đạt tiêu chuẩn an toàn.",
     icon: <PiPlant />,
   },
   {
     id: 2,
     number: <TbCircleNumber2Filled />,
-    title: "Manufacturing",
-    para: "It is a long established fact that a reader",
+    title: "Sản xuất & đóng gói",
+    para: "Quy trình sản xuất và đóng gói được thực hiện theo tiêu chuẩn vệ sinh nghiêm ngặt nhằm giữ trọn độ tươi ngon.",
     icon: <PiFactory />,
   },
   {
     id: 3,
     number: <TbCircleNumber3Filled />,
-    title: "Quality Control",
-    para: "It is a long established fact that a reader",
+    title: "Kiểm soát chất lượng",
+    para: "Mỗi sản phẩm đều được kiểm tra kỹ lưỡng trước khi xuất kho, đảm bảo an toàn thực phẩm và chất lượng tốt nhất.",
     icon: <SlBadge />,
   },
   {
     id: 4,
     number: <TbCircleNumber4Filled />,
-    title: "Logistics",
-    para: "It is a long established fact that a reader",
+    title: "Giao hàng nhanh chóng",
+    para: "Hệ thống vận chuyển linh hoạt giúp sản phẩm đến tay khách hàng nhanh chóng và vẫn giữ nguyên độ tươi mới.",
     icon: <BsTruck />,
   },
 ];
@@ -44,7 +44,9 @@ const steps = [
 const Process = () => {
   const renderSteps = steps.map((item) => {
     return (
-      <div className={`flex-1 basis-75 ${item.id % 2 === 0 ? "md:-mt-100" : ""}`}>
+      <div
+        className={`flex-1 basis-75 ${item.id % 2 === 0 ? "md:-mt-100" : ""}`}
+      >
         <span className="flex justify-center items-center w-18 h-18 mx-auto rounded-full text-8xl bg-zinc-800 text-white outline-[3px] outline-offset-7 outline-zinc-800 outline-dashed">
           {item.number}
         </span>
@@ -67,7 +69,7 @@ const Process = () => {
     <section>
       <div className="max-w-360 mx-auto px-10 py-20">
         <div className="w-fit mr-auto">
-          <Heading highlight="Our" heading="Process" />
+          <Heading highlight="Quy trình" heading="chất lượng" />
         </div>
 
         <div className="flex flex-wrap gap-y-17 items-center justify-center md:mt-20 mt-10 md:pt-50">
