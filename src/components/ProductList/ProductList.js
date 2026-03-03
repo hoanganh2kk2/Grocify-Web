@@ -128,20 +128,6 @@ const products = [
     image: Eggs,
   },
   {
-    id: 20,
-    name: "Thịt bò",
-    price: 75000,
-    category: "Sữa và Thực phẩm tươi",
-    image: Beef,
-  },
-  {
-    id: 21,
-    name: "Ức gà",
-    price: 50000,
-    category: "Sữa và Thực phẩm tươi",
-    image: ChickenBreast,
-  },
-  {
     id: 22,
     name: "Đậu phụ",
     price: 20000,
@@ -149,20 +135,40 @@ const products = [
     image: Tofu,
   },
 
-  // Hải sản
+  // Thịt và Hải sản
+  {
+    id: 20,
+    name: "Thịt bò",
+    price: 75000,
+    category: "Thịt và Hải sản",
+    image: Beef,
+  },
+  {
+    id: 21,
+    name: "Ức gà",
+    price: 50000,
+    category: "Thịt và Hải sản",
+    image: ChickenBreast,
+  },
   {
     id: 23,
     name: "Tôm tươi",
     price: 65000,
-    category: "Hải sản",
+    category: "Thịt và Hải sản",
     image: Shrimp,
   },
-  { id: 24, name: "Cá hồi", price: 80000, category: "Hải sản", image: Salmon },
+  {
+    id: 24,
+    name: "Cá hồi",
+    price: 80000,
+    category: "Thịt và Hải sản",
+    image: Salmon,
+  },
   {
     id: 25,
     name: "Cá rô phi",
     price: 52000,
-    category: "Hải sản",
+    category: "Thịt và Hải sản",
     image: Tilapia,
   },
 ];

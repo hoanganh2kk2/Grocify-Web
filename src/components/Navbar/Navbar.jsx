@@ -3,6 +3,7 @@ import { GoHeartFill } from "react-icons/go";
 import { HiShoppingBag } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
 import { TbMenu2, TbMenu3 } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,9 +26,9 @@ const Navbar = () => {
     >
       <nav className="max-w-360 mx-auto md:h-[14vh] h-[12vh] px-10 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="md:flex hidden items-center space-x-15">
